@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
+  "browserslist": [
+    "last 2 versions",
+    ">1%"
+  ],
   "scripts": {
     "test": "test"
   },
@@ -20,6 +24,7 @@
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-imagemin": "^6.0.0",
     "gulp-sass": "^4.0.2",
