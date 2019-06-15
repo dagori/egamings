@@ -6,7 +6,6 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
-const imageminSvgo = require('imagemin-svgo');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require("gulp-rename");
 
@@ -49,7 +48,9 @@ gulp.task('images', () => {
           {removeViewBox: false},
           {cleanupIDs: false}
         ]
-      })
+      }),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5})
     ]))
     .pipe(gulp.dest('build/images'))
 });
