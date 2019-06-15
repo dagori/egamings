@@ -6,11 +6,375 @@
     <meta name="keywords" content="online casino, WebbySlot">
     <meta name="description" content="Онлайн-казино WebbySlot"/>
     <title>Casino Test</title>
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" as="font">
-    <link href="build/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" as="font">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="build/css/style.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>tttttttttttttttttttt</h1>
-    <script src="build/js/script.js"></script>
+    <header>
+      <form class="search-form" name="searchSite" action="#" method="get">
+        <label><input class="search-form__field" type="search" name="searchSiteField"></label>
+        <button class="search-form__button" type="submit" aria-label="site search"></button>
+      </form>
+      <nav class="menu">
+        <ul>
+          <li class="menu-item menu-item--1"><a href="#">Casino</a></li>
+          <li class="menu-item menu-item--2"><a href="#">Shop</a></li>
+          <li class="menu-item menu-item--3"><a href="#">Promotions</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <span class="logo__image"></span>
+        <span class="logo__text">Casino Test</span>
+      </div>
+      <div class="account">
+        <a class="account__deposit button button--color" href="#">Deposit</a>
+        <a class="account__login button button--transparent" href="#">Log In</a>
+      </div>
+    </header>
+    <main>
+      <section class="present">
+        <div class="sign-up">
+          <h2 class="sign-up__title">Sign up and start winning</h2>
+          <span>With your social network</span>
+          <ul class="sign-up__social social-list">
+            <li class="social-list__item social-list__item--arroba"></li>
+            <li class="social-list__item social-list__item--odnoklassniki"></li>
+            <li class="social-list__item social-list__item--facebook"></li>
+            <li class="social-list__item social-list__item--vk"></li>
+            <li class="social-list__item social-list__item--google-plus"></li>
+          </ul>
+          <span>or</span>
+          <form class="sign-up__form registration" name="registration" action="#" method="post">
+            <input type="email" name="email" placeholder="E-mail *" required>
+            <input type="password" name="password" placeholder="Password *" required>
+            <select name="currency" required>
+              <option value="">Currency *</option>
+            </select>
+            <input type="text" name="promocode" placeholder="Password*" required>
+            <input type="checkbox" name="agreement" id="check-agreement">
+            <label for="check-agreement">I agree with <a href="#">Teame and Confidence</a>
+            </label>
+            <input type="checkbox" name="adult" id="check-adult">
+            <label for="check-adult">I comfirm that I’m 18 years or older</label>
+            <button class="button button--color button__registration" type="submit">Register</button>
+            <a href="#">Have an account?</a>
+          </form>
+        </div>
+        <!--Слайдер??-->
+        <div class="slider">
+          <button class="slider__button slider__button--prev" type="button"></button>
+          <button class="slider__button slider__button--next" type="button"></button>
+        </div>
+        <h1>Welcome BonusPackage</h1>
+        <span>200 bonus and 100 free spins</span>
+        <a class="button button--color button__slider" href="#"></a>
+        <div class="slider__thumbler">
+          <input type="radio" id="radio-1" name="radio">
+          <label for="radio-1"></label>
+
+          <input type="radio" id="radio-2" name="radio">
+          <label for="radio-2"></label>
+
+          <input type="radio" id="radio-3" name="radio">
+          <label for="radio-3"></label>
+
+          <input type="radio" id="radio-4" name="radio">
+          <label for="radio-4"></label>
+        </div>
+      </section>
+      <div class="games-menu">
+        <div class="games-menu__positioner">
+          <ul class="games-menu__list games-category">
+            <li class="games-category__item">New games</li>
+            <li class="games-category__item">Popular</li>
+            <li class="games-category__item">Slots</li>
+            <li class="games-category__item">Casino Live</li>
+            <li class="games-category__item">Table Games</li>
+            <li class="games-category__item">Favorites</li>
+            <li class="games-category__item">Last played</li>
+            <li class="games-category__item">All category</li>
+          </ul>
+          <form class="search-form" name="searchGamesProviders" action="#" method="get">
+            <label><input class="games-menu__search" type="search" name="searchGamesProvidersField"></label>
+            <button class="search-form__button" type="submit" aria-label="games and providers search"></button>
+          </form>
+        </div>
+        <div class="games-menu__positioner">
+          <ul class="providers-menu__list providers-category">
+            <li class="providers-category__item">All Providers</li>
+            <li class="providers-category__item">NetEnt</li>
+            <li class="providers-category__item">Microgaming</li>
+            <li class="providers-category__item">Quickspin</li>
+            <li class="providers-category__item">PragmaticPlay</li>
+            <li class="providers-category__item">BoomingGames</li>
+            <li class="providers-category__item">MrSlotty</li>
+            <li class="providers-category__item">BoomingGames</li>
+            <li class="providers-category__item">BetRadar</li>
+            <li class="providers-category__item">PariPlay</li>
+            <li class="providers-category__item">BetConstruct</li>
+            <li class="providers-category__item">NetEnt</li>
+            <li class="providers-category__item">More</li>
+          </ul>
+        </div>
+      </div>
+      <section class="games games--new">
+        <h2 class="games__title">New games</h2>
+        <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        <div class="games__positioner">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Cash Vandal">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Playboy online slot">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Monster Madness">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Warlords">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Jungle Spirit">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Fairy Tale Legends: Red riding Hood">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Fairy Tale Legends: Hansel & Gretel">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Copy Cats">
+          <div class="games__actual">
+            <img class="games__item games__item--big" src="#" width="493" heigh="384" alt="Zombie Hoard">
+            <button class="button button--color" type="button">Play now</button>
+          </div>
+        </div>
+      </section>
+      <section class="games games--popular">
+        <h2 class="games__title">Popular</h2>
+        <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        <div class="games__positioner">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Jack Hammer 2">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Space Wars">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Gonzos Quest">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Spinata Grande">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Burglin Bob">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Piggy Riches">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Gold Factory">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Starburst">
+          <div class="games__actual">
+            <img class="games__item games__item--big" src="#" width="493" heigh="384" alt="Thors Lightning">
+            <button class="button button--color" type="button">Play now</button>
+          </div>
+        </div>
+      </section>
+      <section class="games games--recommends">
+        <h2 class="games__title">Recommends games</h2>
+        <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        <div class="games__positioner">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Jocker Pro">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Jungle Jim: El dorado">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Kawaii Kitty">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Classic 243">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Fruit vs Candy">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Pretty Kitty">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Hooks Heroes">
+          <img class="games__item" src="#" width="250" heigh="188" alt="Game of Thrones">
+          <div class="games__actual">
+            <img class="games__item games__item--big" src="#" width="493" heigh="384" alt="Pink Elephants">
+            <button class="button button--color" type="button">Play now</button>
+          </div>
+        </div>
+      </section>
+      <div class="payment-system">
+        <ul>
+          <li class="payment-system__item payment-system__item--neteller">
+            <a href="#" target="_blank"></a>
+          </li>
+          <li class="payment-system__item payment-system__item--skrill">
+            <a href="#" target="_blank"></a>
+          </li>
+          <li class="payment-system__item payment-system__item--cubits">
+            <a href="#" target="_blank"></a>
+          </li>
+          <li class="payment-system__item payment-system__item--mastercard">
+            <a href="#" target="_blank"></a>
+          </li>
+          <li class="payment-system__item payment-system__item--visa">
+            <a href="#" target="_blank"></a>
+          </li>
+          <li class="payment-system__item payment-system__item--qiwi">
+            <a href="#" target="_blank"></a>
+          </li>
+          <li class="payment-system__item payment-system__item--yandex-money">
+            <a href="#" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div class="providers">
+        <a class="providers__item providers__item--bet365" href="#" target="_blank">
+          <img src="#" alt="bet365">
+        </a>
+        <a class="providers__item providers__item--YGGDRASIL" href="#" target="_blank">
+          <img src="#" alt="YGGDRASIL">
+        </a>
+        <a class="providers__item providers__item--Microgaming" href="#" target="_blank">
+          <img src="#" alt="Microgaming">
+        </a>
+        <a class="providers__item providers__item--EvolutionGaming" href="#" target="_blank">
+          <img src="#" alt="EvolutionGaming">
+        </a>
+        <a class="providers__item providers__item--pariplay" href="#" target="_blank">
+          <img src="#" alt="pariplay">
+        </a>
+        <a class="providers__item providers__item--EvolutionGaming" href="#" target="_blank">
+          <img src="#" alt="EvolutionGaming">
+        </a>
+        <a class="providers__item providers__item--Microgaming" href="#" target="_blank">
+          <img src="#" alt="Microgaming">
+        </a>
+        <a class="providers__item providers__item--EvolutionGaming" href="#" target="_blank">
+          <img src="#" alt="EvolutionGaming">
+        </a>
+        <a class="providers__item providers__item--bet365" href="#" target="_blank">
+          <img src="#" alt="bet365">
+        </a>
+        <a class="providers__item providers__item--VivoGaming" href="#" target="_blank">
+          <img src="#" alt="VivoGaming">
+        </a>
+        <a class="providers__item providers__item--PlaySon" href="#" target="_blank">
+          <img src="#" alt="PlaySon">
+        </a>
+        <a class="providers__item providers__item--PragmaticPlay" href="#" target="_blank">
+          <img src="#" alt="PragmaticPlay">
+        </a>
+        <a class="providers__item providers__item--SpotOption" href="#" target="_blank">
+          <img src="#" alt="SpotOption">
+        </a>
+        <a class="providers__item providers__item--VivoGaming" href="#" target="_blank">
+          <img src="#" alt="VivoGaming">
+        </a>
+        <a class="providers__item providers__item--YGGDRASIL" href="#" target="_blank">
+          <img src="#" alt="YGGDRASIL">
+        </a>
+        <a class="providers__item providers__item--SpotOption" href="#" target="_blank">
+          <img src="#" alt="SpotOption">
+        </a>
+        <a class="providers__item providers__item--PragmaticPlay" href="#" target="_blank">
+          <img src="#" alt="PragmaticPlay">
+        </a>
+        <a class="providers__item providers__item--SpotOption" href="#" target="_blank">
+          <img src="#" alt="SpotOption">
+        </a>
+        <a class="providers__item providers__item--VivoGaming" href="#" target="_blank">
+          <img src="#" alt="VivoGaming">
+        </a>
+      </div>
+      <div class="footer-positioner">
+        <div class="footer-positioner__logo">
+          <div class="logo">
+            <span class="logo__image"></span>
+            <span class="logo__text">Casino Test</span>
+          </div>
+          <img alt="18+" width="53" height="53" src="#" class="adult-symbol">
+          <img alt="emblem" width="80" height="80" src="#" class="emblem">
+        </div>
+        <nav class="sitemap">
+          <div class="sitemap__block">
+            <h3 class="sitemap__title">Navigation</h3>
+            <ul>
+              <li class="sitemap__item">
+                <a href="#">Promotions</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Casino Live</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Casino</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Sportbook</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sitemap__block">
+            <h3 class="sitemap__title">Categories</h3>
+            <ul>
+              <li class="sitemap__item">
+                <a href="#">New games</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Popular</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Slots</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Casino live</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Other</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sitemap__block">
+            <h3 class="sitemap__title">License</h3>
+            <ul>
+              <li class="sitemap__item">
+                <a href="#">Responsible Game</a>
+              </li>
+              <li class="sitemap__item">
+                <a href="#">Fair Play</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sitemap__block">
+            <h3 class="sitemap__title">Contacts</h3>
+            <ul>
+              <li class="sitemap__item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="information">
+          <div class="information__radio">
+            <input type="radio" id="information-1" name="information">
+            <label for="information-1"></label>
+            <input type="radio" id="information-2" name="information">
+            <label for="information-2"></label>
+            <input type="radio" id="information-3" name="information">
+            <label for="information-3"></label>
+            <input type="radio" id="information-4" name="information">
+            <label for="information-4"></label>
+            <input type="radio" id="information-5" name="information">
+            <label for="information-5"></label>
+            <input type="radio" id="information-6" name="information">
+            <label for="information-6"></label>
+          </div>
+          <div class="information__item">
+            <h3>To test one’s luck, one don’t even need to leave his or her house</h3>
+            <p>Today online casinos have ceased to be something unusual,
+              they are pretty much the same organizations as genuine gambling-houses,
+              and their activities are strictly controlled.
+              The online casino WebbySlot is being repeatedly tested for its honesty, and passes such tests successfully!
+            </p>
+          </div>
+          <div class="information__item">
+            <h3>Text</h3>
+            <p>Text</p>
+          </div>
+          <div class="information__item">
+            <h3>Text</h3>
+            <p>Text</p>
+          </div>
+          <div class="information__item">
+            <h3>Text</h3>
+            <p>Text</p>
+          </div>
+          <div class="information__item">
+            <h3>Text</h3>
+            <p>Text</p>
+          </div>
+          <div class="information__item">
+            <h3>Text</h3>
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+      <div class="rights">
+        Deuscasino.com is operated by SG International N.V., which is registered in E-Commerce park, Vredenberg, Curacao, having gaming licence No.8048/JAZZ2015-035 and all rights to operate the gaming software. SG International LP is providing payment services as an agent according to the licence agreement concluded between SG International LP and SG International N.V.<br>
+        © Deus Casino. All rights reserved.<br>
+        Developed by <a>Softgamings</a>
+      </div>
+    </footer>
   </body>
 </html>

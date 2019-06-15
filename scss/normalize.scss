@@ -1,0 +1,13 @@
+body, h1, h2, h3, ul, li, a, p, section {
+  margin: 0;
+  padding: 0;
+}
+
+a, img, label {
+  display: block;
+}
+
+body, body * {
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+}
