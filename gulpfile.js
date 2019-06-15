@@ -8,9 +8,10 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const imageminSvgo = require('imagemin-svgo');
 const sourcemaps = require('gulp-sourcemaps');
+const rename = require("gulp-rename");
 
 gulp.task('styles', () => {
-  return gulp.src('scss/style.scss')
+  return gulp.src('scss/a-style.scss')
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({
@@ -21,6 +22,10 @@ gulp.task('styles', () => {
     level: 2
   }))
   .pipe(sourcemaps.write())
+  .pipe(rename(function (path) {
+    path.basename = path.basename.slice(2);
+    path.basename += ".min";
+  }))
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.stream())
 });
@@ -32,12 +37,12 @@ gulp.task('watch', () => {
        }
    })
    gulp.watch('images/*', gulp.series('images'))
-   gulp.watch('scss/style.scss', gulp.series('styles'))
+   gulp.watch('scss/a-style.scss', gulp.series('styles'))
    gulp.watch('*.html').on('change', browserSync.reload)
 });
 
 gulp.task('images', () => {
-  return gulp.src('images/**')
+  return gulp.src('images/**', { allowEmpty: true })
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [
@@ -53,5 +58,5 @@ gulp.task('del', () =>  {
   return del(['build/*']);
 })
 
-gulp.task('build', gulp.series('del', 'images', 'styles'));
+gulp.task('build', gulp.series('del', gulp.parallel('images', 'styles')));
 gulp.task('default', gulp.series('build', 'watch'));
