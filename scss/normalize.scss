@@ -11,3 +11,19 @@ body, body * {
   box-sizing: border-box;
   font-family: 'Roboto', Arial, sans-serif;
 }
+
+
+@mixin flag {
+  content: '!!!!!!!!!!!!!!!!!!!!!!!!';
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: 117px;
+  height: 30px;
+  background: linear-gradient(180deg, #1D1269 0%, #EB0255 22.95%);
+}
+
+.new::before {
+  position: relative;
+  @include flag;
+}

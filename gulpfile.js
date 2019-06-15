@@ -35,7 +35,7 @@ gulp.task('watch', () => {
            baseDir: "./"
        }
    })
-   gulp.watch('images/*', gulp.series('images'))
+   gulp.watch('images/**', gulp.series('images'))
    gulp.watch('scss/a-style.scss', gulp.series('styles'))
    gulp.watch('*.html').on('change', browserSync.reload)
 });
@@ -60,4 +60,4 @@ gulp.task('del', () =>  {
 })
 
 gulp.task('build', gulp.series('del', gulp.parallel('images', 'styles')));
-gulp.task('default', gulp.series('build', 'watch'));
+gulp.task('default', gulp.series('del', 'styles', 'watch'));

@@ -2,9 +2,12 @@ body {
   width: 100%;
 }
 
-.main-positioner {
+body {
   width: 1630px;
-  height: 700px;
-  background: red;
+  background: blue;
   margin: 0 auto;
+}
+
+.games__item {
+  border-radius: 17px;
 }
