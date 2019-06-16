@@ -1,0 +1,39 @@
+.information {
+  display: flex;
+  flex-direction: column;
+  width: 387px;
+  height: 213px;
+  color: $color-text-light;
+}
+.information__item {
+  h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 19px;
+  }
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 30px 0 25px;
+  }
+}
+
+.information__radio {
+  width: 155px;
+  display: flex;
+  justify-content: space-between;
+  order: 1;
+  input {
+    display: none;
+  }
+  label {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #172146;
+  }
+  input:checked + label {
+    background-color: #32448C;
+  }
+}

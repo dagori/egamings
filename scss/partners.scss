@@ -1,13 +1,8 @@
 .partners {
-  /*display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  */
-  width: 1180px;
-  background: lightblue;
+  width: 1450px;
   margin: 0 auto;
+  padding: 30px 0;
+  border-bottom: 2px solid #172146;
 }
 
 .partners__item {
@@ -16,7 +11,6 @@
   background-image: url('../images/partners/sprite.partners.svg');
   background-repeat: no-repeat;
   margin-bottom: 50px;
-  border: 1px solid green;
   &--bet365 {
     width: 92px;
   	height: 28px;
@@ -64,6 +58,9 @@
   }
 }
 
-.partners__item:not(:first-child) {
-  margin-left: 10px;
+.partners__item {
+  margin-left: 30px;
+  &:first-child {
+    margin-left: 10px;
+  }
 }

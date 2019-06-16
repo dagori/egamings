@@ -17,21 +17,21 @@
 .games-menu__list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 .games-category__item {
-  height: 26px;
   font-weight: 500;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color:  $color-text-light;
   background: plum;
-  padding: 0 10px 0 40px;
+  padding: 5px 10px 5px 40px;
   //background-image: url("../images/icon/sprite.icon.svg");
   &--all {
-    padding: 0 40px 0 10px;
+    padding: 5px 40px 5px 10px;
   }
 }
 

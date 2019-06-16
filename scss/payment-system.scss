@@ -3,12 +3,12 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding: 58px 0 58px;
 }
 
 .payment-system__item {
   background-image: url("../images/logo/sprite.pay.svg");
   background-repeat: no-repeat;
-  border: 1px solid red;
   &--neteller {
     width: 173px;
     height: 38.82px;

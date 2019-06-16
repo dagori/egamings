@@ -14,10 +14,14 @@ a, img, label {
 }
 
 body {
-  background: #bdecb6;
   font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   overflow-x: hidden;
+}
+
+main {
+  background-color: $color-bg-dark;
+  background-image: $color-bg-main;
 }
 
 .positioner {
@@ -44,4 +48,19 @@ button {
 .new::before {
   position: relative;
   @include flag;
+}
+
+@mixin new {
+  box-shadow: 0px 0px 14px $color-new;
+  border: 5px solid $color-new;
+}
+
+@mixin popular {
+  box-shadow: 0px 0px 14px $color-popular;
+  border: 5px solid $color-popular;
+}
+
+@mixin recommends {
+  box-shadow: 0px 0px 14px $color-recommends;
+  border: 5px solid $color-recommends;
 }

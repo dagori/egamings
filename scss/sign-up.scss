@@ -19,8 +19,7 @@
   justify-content: space-between;
   align-items: center;
   width: 320px;
-  min-height: 390px;
-  background: black;
+  max-height: 390px;
 }
 
 .sign-up__title {
@@ -51,11 +50,10 @@
 }
 
 .sign-up__form {
-  background: lightblue;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: space-between; 
+  align-content: space-between;
   min-height: 255px;
   width: inherit;
   input, select {
