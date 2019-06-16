@@ -82,29 +82,34 @@
           </div>
           <!--Слайдер??-->
           <div class="slider">
-            <button class="slider__button slider__button--prev" type="button"></button>
-            <button class="slider__button slider__button--next" type="button"></button>
-          </div>
-          <h2>Welcome BonusPackage</h2>
-          <span>200 bonus and 100 free spins</span>
-          <a class="button button--color button__slider" href="#"></a>
-          <div class="slider__thumbler">
-            <input type="radio" id="radio-1" name="radio">
-            <label for="radio-1"></label>
+            <div class="slider__button-container">
+              <button class="slider__button slider__button--prev" type="button"></button>
+              <button class="slider__button slider__button--next" type="button"></button>
+            </div>
+            <div class="slide">
+              <span>First bonuses</span>
+              <h2 class="slide__title">Welcome BonusPackage</h2>
+              <span>200 bonus and 100 free spins</span>
+              <a class="slide__button" href="#">Deposit</a>
+            </div>
+            <div class="slider__thumbler-container">
+              <input type="radio" id="radio-1" name="radio">
+              <label for="radio-1"></label>
 
-            <input type="radio" id="radio-2" name="radio">
-            <label for="radio-2"></label>
+              <input type="radio" id="radio-2" name="radio">
+              <label for="radio-2"></label>
 
-            <input type="radio" id="radio-3" name="radio">
-            <label for="radio-3"></label>
+              <input type="radio" id="radio-3" name="radio">
+              <label for="radio-3"></label>
 
-            <input type="radio" id="radio-4" name="radio">
-            <label for="radio-4"></label>
+              <input type="radio" id="radio-4" name="radio">
+              <label for="radio-4"></label>
+            </div>
           </div>
         </div>
       </section>
       <div class="games-menu">
-        <div class="games-menu__positioner">
+        <div class="games-menu__positioner positioner">
           <ul class="games-menu__list games-category">
             <li class="games-category__item">New games</li>
             <li class="games-category__item">Popular</li>
@@ -113,16 +118,16 @@
             <li class="games-category__item">Table Games</li>
             <li class="games-category__item">Favorites</li>
             <li class="games-category__item">Last played</li>
-            <li class="games-category__item">All category</li>
+            <li class="games-category__item games-category__item--all">All category</li>
           </ul>
           <form class="search-form" name="searchGamesProviders" action="#" method="get">
-            <label><input class="games-menu__search" type="search" name="searchGamesProvidersField"></label>
+            <input class="search-form__field" type="search" name="searchGamesProvidersField">
             <button class="search-form__button" type="submit" aria-label="games and providers search"></button>
           </form>
         </div>
-        <div class="games-menu__positioner">
-          <ul class="providers-menu__list providers-category">
-            <li class="providers-category__item">All Providers</li>
+        <div class="games-menu__positioner positioner">
+          <ul class="games-menu__list providers-category">
+            <li class="providers-category__item providers-category__item--active">All Providers</li>
             <li class="providers-category__item">NetEnt</li>
             <li class="providers-category__item">Microgaming</li>
             <li class="providers-category__item">Quickspin</li>
@@ -134,7 +139,7 @@
             <li class="providers-category__item">PariPlay</li>
             <li class="providers-category__item">BetConstruct</li>
             <li class="providers-category__item">NetEnt</li>
-            <li class="providers-category__item">More</li>
+            <li class="providers-category__item providers-category__item--more">More</li>
           </ul>
         </div>
       </div>

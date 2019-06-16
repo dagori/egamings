@@ -1,3 +1,16 @@
+.present {
+  outline: 4px solid red;
+  width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-image: url("../images/img/brice-laville-saint-martin-asset.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  @media #{$retina-dpi}, #{$retina-dppx} {
+    background-image: url("../images/img/brice-laville-saint-martin-asset@2x.jpg");
+  }
+}
+
 .present--positioner {
   display: flex;
   justify-content: space-between;

@@ -12,10 +12,15 @@ $color-form-border: #32448C;
 $color-text-slim: #8C91BA;
 $color-text-light: #ffffff;
 $color-text-dark: #000000;
+$color-text-providers: #8187AD;
 //background
 $color-bg-dark: #121423;
 //  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 $color-bg-main: linear-gradient(283.07deg, #121726 57.75%, #222C42 90.78%);
+/*Ретина*/
+
+$retina-dpi: (min-resolution: 144dpi);
+$retina-dppx: (min-resolution: 1.5dppx);
 
 @mixin style-button() {
   font-style: normal;

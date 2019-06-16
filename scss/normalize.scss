@@ -14,10 +14,10 @@ a, img, label {
 }
 
 body {
-  width: 100%;
   background: #bdecb6;
   font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 .positioner {
