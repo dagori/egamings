@@ -1,0 +1,94 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-bet365 {
+	@extend %svg-common;
+	background-position: 0 99.9153846153846%;
+}
+
+.svg-bet365-dims {
+	width: 92px;
+	height: 28px;
+}
+
+.svg-evolutiongaming {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-evolutiongaming-dims {
+	width: 138px;
+	height: 23.89px;
+}
+
+.svg-microgaming {
+	@extend %svg-common;
+	background-position: 60.526315789473685% 99.15267175572518%;
+}
+
+.svg-microgaming-dims {
+	width: 87px;
+	height: 27px;
+}
+
+.svg-pariplay {
+	@extend %svg-common;
+	background-position: 0 55.46825396825397%;
+}
+
+.svg-pariplay-dims {
+	width: 101px;
+	height: 32px;
+}
+
+.svg-playson {
+	@extend %svg-common;
+	background-position: 0 78.37692307692308%;
+}
+
+.svg-playson-dims {
+	width: 101px;
+	height: 28px;
+}
+
+.svg-pragmaticplay {
+	@extend %svg-common;
+	background-position: 0 21.330357142857142%;
+}
+
+.svg-pragmaticplay-dims {
+	width: 102px;
+	height: 46px;
+}
+
+.svg-spotoption {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-spotoption-dims {
+	width: 101px;
+	height: 32px;
+}
+
+.svg-vivo {
+	@extend %svg-common;
+	background-position: 98.52216748768474% 57.142857142857146%;
+}
+
+.svg-vivo-dims {
+	width: 98.93px;
+	height: 53px;
+}
+
+.svg-yggdrasil {
+	@extend %svg-common;
+	background-position: 100% 24.615384615384617%;
+}
+
+.svg-yggdrasil-dims {
+	width: 101px;
+	height: 28px;
+}
+

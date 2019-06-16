@@ -1,17 +1,35 @@
-body, h1, h2, h3, ul, li, a, p, section {
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, ul, li, a, p, section, button {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 a, img, label {
   display: block;
 }
 
-body, body * {
-  box-sizing: border-box;
+body {
+  width: 100%;
+  background: #bdecb6;
   font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
 }
 
+.positioner {
+  width: 1530px;
+  height: inherit;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
 
 @mixin flag {
   content: '!!!!!!!!!!!!!!!!!!!!!!!!';

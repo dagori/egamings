@@ -1,0 +1,47 @@
+.payment-system {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-system__item {
+  background-image: url("../images/logo/sprite.pay.svg");
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  &--neteller {
+    width: 173px;
+    height: 38.82px;
+    background-position: 0 0;
+  }
+  &--skrill {
+    width: 95px;
+    height: 40px;
+    background-position: 90.57591623036649% 23.280423280423282%;
+  }
+  &--cubits {
+    width: 166px;
+    height: 51px;
+    background-position: 0 21.808988764044944%;
+  }
+  &--mastercard {
+    width: 61.74px;
+    height: 51px;
+    background-position: 0 99.89887640449439%;
+  }
+  &--visa {
+    width: 113px;
+    height: 44px;
+    background-position: 100% 0;
+  }
+  &--qiwi {
+    width: 91px;
+    height: 47px;
+    background-position: 0 71.87912087912088%;
+  }
+  &--yandex-money {
+    width: 144px;
+    height: 41px;
+  	background-position: 0 47.776595744680854%;
+  }
+}

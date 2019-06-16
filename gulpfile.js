@@ -7,19 +7,49 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
+const svgSprite = require('gulp-svg-sprite');
+const plumber = require('gulp-plumber');
+
+const config = {
+  shape: {
+    dimension: { // Set maximum dimensions
+      maxWidth: 128,
+      maxHeight: 43
+    },
+    spacing: { // Add padding
+      padding: 5
+    }
+  },
+  mode: {
+    view: { // Activate the «view» mode
+      bust: false,
+      render: {
+        scss: true // Activate Sass output (with default options)
+      }
+    },
+    symbol: false // Activate the «symbol» mode
+  }
+};
+
+gulp.task('sprite', () => {
+  return gulp.src('images/partners/*.svg')
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('images/partners'));
+});
 
 gulp.task('styles', () => {
   return gulp.src('scss/a-style.scss')
+  .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({
     overrideBrowserList: ['last 2 versions', '>1%'],
     cascade: false
   }))
-  .pipe(cleanCSS({
-    level: 2
-  }))
+//  .pipe(cleanCSS({
+//    level: 2
+//  }))
   .pipe(sourcemaps.write())
   .pipe(rename(function (path) {
     path.basename = path.basename.slice(2);
@@ -36,7 +66,7 @@ gulp.task('watch', () => {
        }
    })
    gulp.watch('images/**', gulp.series('images'))
-   gulp.watch('scss/a-style.scss', gulp.series('styles'))
+   gulp.watch('scss/*.scss', gulp.series('styles'))
    gulp.watch('*.html').on('change', browserSync.reload)
 });
 
@@ -56,8 +86,8 @@ gulp.task('images', () => {
 });
 
 gulp.task('del', () =>  {
-  return del(['build/*']);
+  return del(['/build']);
 })
 
 gulp.task('build', gulp.series('del', gulp.parallel('images', 'styles')));
-gulp.task('default', gulp.series('del', 'styles', 'watch'));
+gulp.task('default', gulp.series('build', 'watch'));
