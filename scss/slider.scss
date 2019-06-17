@@ -1,9 +1,11 @@
 .slider {
-  width: 1042px;
+  width: 1045px;
   height: 492px;
   padding-left: 68px;
   display: flex;
   flex-direction: column;
+  padding-top: 57px;
+  box-shadow: -30px 0px 20px 5px rgba(0, 0, 0, 0.3);
 }
 
 .slider__button-container {
