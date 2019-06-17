@@ -19,9 +19,16 @@
 
 .games__positioner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.games__inner-positioner {
+  display: flex;
   flex-wrap: wrap;
-  max-height: 390px;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 1020px;
 }
 
 .games__title {
@@ -51,11 +58,8 @@
   img {
     border-radius: 17px;
   }
-  &:nth-of-type(even) {
-    margin-top: 10px;
-  }
   &--big {
-    width: 488px;
+    width: 493px;
     height: 379px;
     position: relative;
   }
@@ -128,15 +132,3 @@
     @include flag(64px, 20px, 'Popular');
   }
 }
-
-/*Хак для IE11
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .games__positioner {
-    display: block;
-    max-height: 390px;
-  }
-  .games__positioner .games__item {
-    display: inline-block;
-  }
-}
-*/
