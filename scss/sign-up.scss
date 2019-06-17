@@ -82,7 +82,7 @@ select[name="currency"] {
   background-image: url("../images/icon/sprite.icon.svg#select");
   background-repeat: no-repeat;
   background-size: 21px 17px;
-  background-position: 66px center;
+  background-position: 69px center;
   appearance: none!important;
   &::-ms-expand {
   	display: none;
@@ -134,4 +134,20 @@ select[name="currency"] {
   background: $color-button;
   border-radius: 17px;
   border: 1px solid $color-text-dark;
+}
+
+.sign__up {
+  input::-moz-placeholder, input:-moz-placeholder {
+    opacity: 1;
+    color: white;
+  }
+}
+/*Хак для IE 11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .sign-up__form > * {
+     margin-bottom: 15px;
+   }
+   .sign-up__form select[name="currency"] {
+     margin: 0 0 0 12px;
+   }
 }

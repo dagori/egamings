@@ -128,3 +128,15 @@
     @include flag(64px, 20px, 'Popular');
   }
 }
+
+/*Хак для IE11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .games__positioner {
+    display: block;
+    max-height: 390px;
+  }
+  .games__positioner .games__item {
+    display: inline-block;
+  }
+}
+*/
