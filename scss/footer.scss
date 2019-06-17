@@ -1,0 +1,43 @@
+.footer {
+  background: $color-bg-dark;
+}
+
+.footer__positioner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.emblems {
+  width: 245px;
+  img {
+    display: inline-block;
+    margin-top: 37px;
+    vertical-align: middle;
+  }
+}
+.emblems__logo {
+  @include logo;
+  width: 245px;
+  height: 51px;
+  text-align: right;
+  font-size: 30px;
+  line-height: 65px;
+  background-size: 65px;
+  background-position: -10px center;
+}
+
+.rights {
+  width: 895px;
+  margin: 0 auto;
+  padding: 0 0 55px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  color: $color-text-light;
+  a {
+    display: inline;
+    color: $color-button;
+  }
+}

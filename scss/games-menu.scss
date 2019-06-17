@@ -1,0 +1,82 @@
+.games-menu {
+  background: $color-bg-dark;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+}
+
+.games-menu__positioner {
+  display: flex;
+  flex-direction: space-between;
+  &:nth-of-type(2) {
+    margin-top: 20px;
+  }
+}
+
+.games-menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.games-category__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color:  $color-text-light;
+  padding: 0 10px 5px 40px;
+  background-repeat: no-repeat;
+  background-position: -5px center;
+  background-size: 50px;
+  &--all {
+    padding: 0 40px 5px 10px;
+    background-image: url("../images/icon/sprite.icon.svg#more");
+    background-position: 85px center;
+    background-size: 30px;
+  }
+  &--new{
+    background-image: url("../images/icon/sprite.icon.svg#new-games");
+  }
+  &--popular {
+    background-image: url("../images/icon/sprite.icon.svg#popular");
+  }
+  &--slots {
+    background-image: url("../images/icon/sprite.icon.svg#slots");
+  }
+  &--live {
+    background-image: url("../images/icon/sprite.icon.svg#casinolive");
+  }
+  &--table {
+    background-image: url("../images/icon/sprite.icon.svg#tablegames");
+  }
+  &--favorites {
+    background-image: url("../images/icon/sprite.icon.svg#favorites");
+  }
+  &--last {
+    background-image: url("../images/icon/sprite.icon.svg#lastplayed");
+  }
+}
+
+.providers-category__item {
+  height: 26px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 26px;
+  color: $color-text-providers;
+  border: 1px solid $color-text-providers;
+  border-radius: 30px;
+  padding: 0 10px;
+  &--all {
+    border: 1px solid $color-button-active;
+    color:  $color-text-light;
+  }
+  &--more {
+    padding: 0 30px 0 10px;
+    background: url("../images/icon/sprite.icon.svg#more") no-repeat;
+    background-position: right center;
+    background-size: 30px;
+  }
+}

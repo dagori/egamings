@@ -1,0 +1,71 @@
+.header {
+  background: $color-bg-dark;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+
+.header--positioner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  width: 242px;
+  margin: 0 auto 0 43px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu__item {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  a {
+    color: $color-text-light;
+  }
+}
+
+.logo {
+  @include logo;
+  width: 169px;
+  height: 40px;
+  text-align: right;
+  font-size: 20px;
+  line-height: 50px;
+  background-size: 50px;
+  background-position: -5px center;
+  margin-right: auto;
+}
+
+.account {
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.account__button {
+  height: 39px;
+  border-radius: 100px;
+  line-height: 39px;
+  text-align: center;
+  font-size: 16px;
+  &--deposit {
+    width: 115px;
+    background: $color-button;
+    font-weight: bold;
+    color: $color-text-dark;
+  }
+  &--login {
+    width: 129px;
+    border: 1px solid $color-button-light;
+    font-weight: 500px;
+    color: $color-text-light;
+    background: url("../images/icon/sprite.icon.svg#login") no-repeat;
+    background-size: 21px 23px;
+    background-position: 18px center;
+  }
+}

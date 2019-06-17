@@ -1,0 +1,32 @@
+.sitemap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: flex-start;
+  width: 620px;
+}
+
+.sitemap__block {
+  margin-right: 27px;
+}
+.sitemap__block ul {
+  width: 140px;
+}
+
+.sitemap__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 42px;
+  color: $color-text-light;
+}
+
+.sitemap__item {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 9px;
+  a {
+    color: $color-form-border;
+  }
+}

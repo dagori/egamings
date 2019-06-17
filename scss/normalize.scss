@@ -1,13 +1,39 @@
-body, h1, h2, h3, ul, li, a, p, section {
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, ul, li, a, p, section, button {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
+
 }
 
 a, img, label {
   display: block;
 }
 
-body, body * {
-  box-sizing: border-box;
+body {
   font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  overflow-x: hidden;
+  background-color: #121726;
+  background-image: linear-gradient(283.07deg, #121726 57.75%, #222C42 90.78%);
+}
+
+main {
+  background-color: $color-bg-dark;
+  background-image: $color-bg-main;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.positioner {
+  width: 1530px;
+  height: inherit;
+  margin: 0 auto;
 }

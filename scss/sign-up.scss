@@ -1,0 +1,153 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 390px;
+  margin-top: 57px;
+}
+
+.sign-up__title {
+  font-weight: bold;
+  font-size: 24px;
+  color: $color-text-light;
+}
+
+.sign-up__info {
+  @include light-text();
+  a {
+    display: inline;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 228px;
+}
+
+.social-list__item {
+  width: 44px;
+  height: 44px;
+  a {
+    width: 44px;
+    height: 44px;
+    background-image: url("../images/icon/sprite.social.svg");
+  }
+  &--arroba a {
+    background-position: 51.13636363636363% 0;
+  }
+  &--odnoklassniki a {
+	  background-position: 49.42528735632184% 100%;
+  }
+  &--facebook a {
+    background-position: 100% 0;
+  }
+  &--vk a {
+	  background-position: 0 0;
+  }
+  &--google-plus a {
+    background-position: 0 100%;
+  }
+}
+
+.sign-up__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  min-height: 255px;
+  width: inherit;
+  input, select {
+    @include form-elements-design();
+  }
+}
+
+input[type="email"], input[type="text"] {
+  width: 100%;
+}
+
+input[type="password"] {
+  width: 213px;
+}
+
+select[name="currency"] {
+  @include light-text;
+  width: 93px;
+  margin-left: auto;
+  border-radius: 7px;
+  background-image: url("../images/icon/sprite.icon.svg#select");
+  background-repeat: no-repeat;
+  background-size: 21px 17px;
+  background-position: 69px center;
+  appearance: none!important;
+  &::-ms-expand {
+  	display: none;
+	}
+}
+
+.sign-up__password {
+  position: relative;
+}
+
+.sign-up__password-button {
+  position: absolute;
+  width: 28px;
+  height: 29px;
+  top: 0px;
+  right: 12px;
+  background: url("../images/icon/sprite.icon.svg#eye") no-repeat;
+  background-size: 28px 29px;
+}
+
+.sign-up__promocode {
+  width: 100%;
+  position: relative;
+  a {
+    width: 7px;
+    height: 15px;
+    position: absolute;
+    @include light-text;
+    top: 8px;
+    right: 15px;
+  }
+}
+
+.sign-up__info {
+  width: 210px;
+  position: relative;
+  text-align: center;
+  input {
+    display: none;
+  }
+  &--check::before {
+    @include pseudo-checkbox-sign-up;
+  }
+}
+
+.sign-up__submit {
+  width: 124px;
+  height: 30px;
+  background: $color-button;
+  border-radius: 17px;
+  border: 1px solid $color-text-dark;
+}
+
+.sign__up {
+  input::-moz-placeholder, input:-moz-placeholder {
+    opacity: 1;
+    color: white;
+  }
+}
+/*Хак для IE 11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .sign-up__form > * {
+     margin-bottom: 15px;
+   }
+   .sign-up__form select[name="currency"] {
+     margin: 0 0 0 12px;
+   }
+}

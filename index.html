@@ -11,261 +11,287 @@
     <link href="build/css/style.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header>
-      <form class="search-form" name="searchSite" action="#" method="get">
-        <label><input class="search-form__field" type="search" name="searchSiteField"></label>
-        <button class="search-form__button" type="submit" aria-label="site search"></button>
-      </form>
-      <nav class="menu">
-        <ul>
-          <li class="menu-item menu-item--1"><a href="#">Casino</a></li>
-          <li class="menu-item menu-item--2"><a href="#">Shop</a></li>
-          <li class="menu-item menu-item--3"><a href="#">Promotions</a></li>
-        </ul>
-      </nav>
-      <div class="logo">
-        <span class="logo__image"></span>
-        <span class="logo__text">Casino Test</span>
-      </div>
-      <div class="account">
-        <a class="account__deposit button button--color" href="#">Deposit</a>
-        <a class="account__login button button--transparent" href="#">Log In</a>
+    <header class="header">
+      <div class="positioner header--positioner">
+        <form class="search-form search-form--site" name="searchSite" action="#" method="get">
+          <input class="search-form__field" type="search" name="searchSiteField">
+          <button class="search-form__button" type="submit" aria-label="search for site"></button>
+        </form>
+        <nav class="menu">
+          <ul>
+            <li class="menu__item menu__item--1">
+              <a href="#">Casino</a>
+            </li>
+            <li class="menu__item menu__item--2">
+              <a href="#">Shop</a>
+            </li>
+            <li class="menu__item menu__item--3">
+              <a href="#">Promotions</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="logo">Casino Test</div>
+        <div class="account">
+          <a class="account__button account__button--deposit" href="#">Deposit</a>
+          <a class="account__button account__button--login" href="#">Log In</a>
+        </div>
       </div>
     </header>
     <main>
       <section class="present">
-        <div class="sign-up">
-          <h2 class="sign-up__title">Sign up and start winning</h2>
-          <span>With your social network</span>
-          <ul class="sign-up__social social-list">
-            <li class="social-list__item social-list__item--arroba"></li>
-            <li class="social-list__item social-list__item--odnoklassniki"></li>
-            <li class="social-list__item social-list__item--facebook"></li>
-            <li class="social-list__item social-list__item--vk"></li>
-            <li class="social-list__item social-list__item--google-plus"></li>
-          </ul>
-          <span>or</span>
-          <form class="sign-up__form registration" name="registration" action="#" method="post">
-            <input type="email" name="email" placeholder="E-mail *" required>
-            <input type="password" name="password" placeholder="Password *" required>
-            <select name="currency" required>
-              <option value="">Currency *</option>
-            </select>
-            <input type="text" name="promocode" placeholder="Password*" required>
-            <input type="checkbox" name="agreement" id="check-agreement">
-            <label for="check-agreement">I agree with <a href="#">Teame and Confidence</a>
-            </label>
-            <input type="checkbox" name="adult" id="check-adult">
-            <label for="check-adult">I comfirm that I’m 18 years or older</label>
-            <button class="button button--color button__registration" type="submit">Register</button>
-            <a href="#">Have an account?</a>
-          </form>
-        </div>
-        <!--Слайдер??-->
-        <div class="slider">
-          <button class="slider__button slider__button--prev" type="button"></button>
-          <button class="slider__button slider__button--next" type="button"></button>
-        </div>
-        <h1>Welcome BonusPackage</h1>
-        <span>200 bonus and 100 free spins</span>
-        <a class="button button--color button__slider" href="#"></a>
-        <div class="slider__thumbler">
-          <input type="radio" id="radio-1" name="radio">
-          <label for="radio-1"></label>
+        <div class="positioner present--positioner">
+          <div class="sign-up">
+            <h3 class="sign-up__title">Sign up and start winning</h3>
+            <span class="sign-up__info">With your social network</span>
+            <ul class="sign-up__social social-list">
+              <li class="social-list__item social-list__item--arroba">
+                <a href="#" aria-label="arroba"></a>
+              </li>
+              <li class="social-list__item social-list__item--odnoklassniki">
+                <a href="#" aria-label="odnoklassniki"></a>
+              </li>
+              <li class="social-list__item social-list__item--facebook">
+                <a href="#" aria-label="facebook"></a>
+              </li>
+              <li class="social-list__item social-list__item--vk">
+                <a href="#" aria-label="vk"></a>
+              </li>
+              <li class="social-list__item social-list__item--google-plus">
+                <a href="#" aria-label="google-plus"></a>
+              </li>
+            </ul>
+            <span class="sign-up__info">or</span>
+            <form class="sign-up__form" name="registration" action="#" method="post">
+              <input type="email" name="email" placeholder="E-mail *" required>
+              <div class="sign-up__password">
+                <input type="password" name="password" placeholder="Password *" required>
+                <button class="sign-up__password-button" type="button" title="Show password"></button>
+              </div>
+              <select name="currency" required>
+                <option value="">Currency *</option>
+              </select>
+              <label class="sign-up__promocode">
+                <input type="text" name="promocode" placeholder="Promo-code">
+                <a href="#" title="promo-code information">?</a>
+              </label>
+              <label class="sign-up__info sign-up__info--check" for="check-agreement">
+                <input type="checkbox" name="agreement" id="check-agreement">I agree with <a href="#">Teame and Confidence</a>
+              </label>
+              <label class="sign-up__info sign-up__info--check" for="check-adult">
+                <input type="checkbox" name="adult" id="check-adult">I comfirm that I’m 18 years or older
+              </label>
+              <button class="sign-up__submit" type="submit">Register</button>
+              <a  class="sign-up__info" href="#">Have an account?</a>
+            </form>
+          </div>
+          <div class="slider">
+            <div class="slider__button-container">
+              <button class="slider__button slider__button--prev" type="button"></button>
+              <button class="slider__button slider__button--next" type="button"></button>
+            </div>
+            <div class="slide">
+              <span>First bonuses</span>
+              <h2 class="slide__title">Welcome BonusPackage</h2>
+              <span>200 bonus and 100 free spins</span>
+              <a class="slide__button" href="#">Deposit</a>
+            </div>
+            <div class="slider__thumbler-container">
+              <input type="radio" id="radio-1" name="radio" checked>
+              <label for="radio-1"></label>
 
-          <input type="radio" id="radio-2" name="radio">
-          <label for="radio-2"></label>
+              <input type="radio" id="radio-2" name="radio">
+              <label for="radio-2"></label>
 
-          <input type="radio" id="radio-3" name="radio">
-          <label for="radio-3"></label>
+              <input type="radio" id="radio-3" name="radio">
+              <label for="radio-3"></label>
 
-          <input type="radio" id="radio-4" name="radio">
-          <label for="radio-4"></label>
+              <input type="radio" id="radio-4" name="radio">
+              <label for="radio-4"></label>
+            </div>
+          </div>
         </div>
       </section>
       <div class="games-menu">
-        <div class="games-menu__positioner">
-          <ul class="games-menu__list games-category">
-            <li class="games-category__item">New games</li>
-            <li class="games-category__item">Popular</li>
-            <li class="games-category__item">Slots</li>
-            <li class="games-category__item">Casino Live</li>
-            <li class="games-category__item">Table Games</li>
-            <li class="games-category__item">Favorites</li>
-            <li class="games-category__item">Last played</li>
-            <li class="games-category__item">All category</li>
-          </ul>
-          <form class="search-form" name="searchGamesProviders" action="#" method="get">
-            <label><input class="games-menu__search" type="search" name="searchGamesProvidersField"></label>
-            <button class="search-form__button" type="submit" aria-label="games and providers search"></button>
+        <div class="games-menu__positioner positioner">
+          <div class="games-menu__list games-category">
+            <a href="#" class="games-category__item games-category__item--new">New games</a>
+            <a href="#" class="games-category__item games-category__item--popular">Popular</a>
+            <a href="#" class="games-category__item games-category__item--slots">Slots</a>
+            <a href="#" class="games-category__item games-category__item--live">Casino Live</a>
+            <a href="#" class="games-category__item games-category__item--table">Table Games</a>
+            <a href="#" class="games-category__item games-category__item--favorites">Favorites</a>
+            <a href="#" class="games-category__item games-category__item--last">Last played</a>
+            <a href="#" class="games-category__item games-category__item--all">All category</a>
+          </div>
+          <form class="search-form search-form--games" name="searchGamesProviders" action="#" method="get">
+            <input class="search-form__field" type="search" name="searchGamesProvidersField">
+            <button class="search-form__button" type="submit" aria-label="search for games and providers"></button>
           </form>
         </div>
-        <div class="games-menu__positioner">
-          <ul class="providers-menu__list providers-category">
-            <li class="providers-category__item">All Providers</li>
-            <li class="providers-category__item">NetEnt</li>
-            <li class="providers-category__item">Microgaming</li>
-            <li class="providers-category__item">Quickspin</li>
-            <li class="providers-category__item">PragmaticPlay</li>
-            <li class="providers-category__item">BoomingGames</li>
-            <li class="providers-category__item">MrSlotty</li>
-            <li class="providers-category__item">BoomingGames</li>
-            <li class="providers-category__item">BetRadar</li>
-            <li class="providers-category__item">PariPlay</li>
-            <li class="providers-category__item">BetConstruct</li>
-            <li class="providers-category__item">NetEnt</li>
-            <li class="providers-category__item">More</li>
-          </ul>
+        <div class="games-menu__positioner positioner">
+          <div class="games-menu__list providers-category">
+            <a href="#" class="providers-category__item providers-category__item--all">All Providers</a>
+            <a href="#" class="providers-category__item providers-category__item--netent">NetEnt</a>
+            <a href="#" class="providers-category__item providers-category__item--microgaming">Microgaming</a>
+            <a href="#" class="providers-category__item providers-category__item--quickspin">Quickspin</a>
+            <a href="#" class="providers-category__item providers-category__item--pragmaticplay">PragmaticPlay</a>
+            <a href="#" class="providers-category__item providers-category__item--boominggames">BoomingGames</a>
+            <a href="#" class="providers-category__item providers-category__item--mrslotty">MrSlotty</a>
+            <a href="#" class="providers-category__item providers-category__item--boominggames">BoomingGames</a>
+            <a href="#" class="providers-category__item providers-category__item--betradar">BetRadar</a>
+            <a href="#" class="providers-category__item providers-category__item--pariplay">PariPlay</a>
+            <a href="#" class="providers-category__item providers-category__item--betconstruct">BetConstruct</a>
+            <a href="#" class="providers-category__item providers-category__item--netent">NetEnt</a>
+            <a href="#" class="providers-category__item providers-category__item--more">More</a>
+          </div>
         </div>
       </div>
       <section class="games games--new">
-        <h2 class="games__title">New games</h2>
-        <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        <div class="games__container">
+          <h3 class="games__title">New games</h3>
+          <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        </div>
         <div class="games__positioner">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Cash Vandal">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Playboy online slot">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Monster Madness">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Warlords">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Jungle Spirit">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Fairy Tale Legends: Red riding Hood">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Fairy Tale Legends: Hansel & Gretel">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Copy Cats">
-          <div class="games__actual">
-            <img class="games__item games__item--big" src="#" width="493" heigh="384" alt="Zombie Hoard">
-            <button class="button button--color" type="button">Play now</button>
+          <div class="games__item">
+            <img src="images/img/cashvandal.jpg" width="250" height="188" alt="Cash Vandal">
+          </div>
+          <div class="games__item">
+            <img src="images/img/playboy.jpg" width="250" height="188" alt="Playboy online slot">
+          </div>
+          <div class="games__item">
+            <img src="images/img/monster-madness.jpg" width="250" height="188" alt="Monster Madness">
+          </div>
+          <div class="games__item">
+            <img src="images/img/warlords.jpg" width="250" height="188" alt="Warlords">
+          </div>
+          <div class="games__item">
+            <img src="images/img/jungle-spirit.jpg" width="250" height="188" alt="Jungle Spirit">
+          </div>
+          <div class="games__item">
+            <img src="images/img/fairy-red.jpg" width="250" height="188" alt="Fairy Tale Legends: Red riding Hood">
+          </div>
+          <div class="games__item">
+            <img src="images/img/hansel-gretel.jpg" width="250" height="188" alt="Fairy Tale Legends: Hansel & Gretel">
+          </div>
+          <div class="games__item">
+            <img src="images/img/copycats.jpg" width="250" height="188" alt="Copy Cats">
+          </div>
+          <div class="games__item games__item--big new">
+            <img src="images/img/zombie-hord.jpg" width="493" height="385" alt="Zombie Hoard">
+            <button class="games__play-now games__play-now--new" type="button">Play now</button>
           </div>
         </div>
       </section>
       <section class="games games--popular">
-        <h2 class="games__title">Popular</h2>
-        <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        <div class="games__container">
+          <h3 class="games__title">Popular</h3>
+          <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        </div>
         <div class="games__positioner">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Jack Hammer 2">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Space Wars">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Gonzos Quest">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Spinata Grande">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Burglin Bob">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Piggy Riches">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Gold Factory">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Starburst">
-          <div class="games__actual">
-            <img class="games__item games__item--big" src="#" width="493" heigh="384" alt="Thors Lightning">
-            <button class="button button--color" type="button">Play now</button>
+          <div class="games__item">
+            <img class="games__item" src="images/img/jackhammer2.jpg" width="250" height="188" alt="Jack Hammer 2">
+          </div>
+          <div class="games__item">
+            <img src="images/img/spacewars.jpg" width="250" height="188" alt="Space Wars">
+          </div>
+          <div class="games__item">
+            <img src="images/img/eldorado.jpg" width="250" height="188" alt="Gonzos Quest">
+          </div>
+          <div class="games__item">
+            <img src="images/img/spinata-grande.jpg" width="250" height="188" alt="Spinata Grande">
+          </div>
+          <div class="games__item">
+            <img src="images/img/burglinbob.jpg" width="250" height="188" alt="Burglin Bob">
+          </div>
+          <div class="games__item">
+            <img src="images/img/piggyriches.jpg" width="250" height="188" alt="Piggy Riches">
+          </div>
+          <div class="games__item">
+            <img src="images/img/goldfactory.jpg" width="250" height="188" alt="Gold Factory">
+          </div>
+          <div class="games__item">
+            <img src="images/img/starburst.jpg" width="250" height="188" alt="Starburst">
+          </div>
+          <div class="games__item games__item--big popular">
+            <img src="images/img/thors_lightning.jpg" width="493" height="384" alt="Thors Lightning">
+            <button class="games__play-now games__play-now--popular" type="button">Play now</button>
           </div>
         </div>
       </section>
       <section class="games games--recommends">
-        <h2 class="games__title">Recommends games</h2>
-        <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        <div class="games__container">
+          <h3 class="games__title">Recommends games</h3>
+          <a class="games__all" href="#">View all(<span class="games__amount">46</span>)</a>
+        </div>
         <div class="games__positioner">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Jocker Pro">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Jungle Jim: El dorado">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Kawaii Kitty">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Classic 243">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Fruit vs Candy">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Pretty Kitty">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Hooks Heroes">
-          <img class="games__item" src="#" width="250" heigh="188" alt="Game of Thrones">
-          <div class="games__actual">
-            <img class="games__item games__item--big" src="#" width="493" heigh="384" alt="Pink Elephants">
-            <button class="button button--color" type="button">Play now</button>
+          <div class="games__item popular">
+            <img src="images/img/jokerpro.jpg" width="250" height="188" alt="Jocker Pro">
+          </div>
+          <div class="games__item new">
+            <img src="images/img/JungleJim_ElDorado.jpg" width="250" height="188" alt="Jungle Jim: El dorado">
+          </div>
+          <div class="games__item new">
+            <img src="images/img/kawaii_kitty.jpg" width="250" height="188" alt="Kawaii Kitty">
+          </div>
+          <div class="games__item">
+            <img src="images/img/classic243.jpg" width="250" height="188" alt="Classic 243">
+          </div>
+          <div class="games__item">
+            <img src="images/img/FruitVSCandy.jpg" width="250" height="188" alt="Fruit vs Candy">
+          </div>
+          <div class="games__item popular">
+            <img src="images/img/PrettyKitty.jpg" width="250" height="188" alt="Pretty Kitty">
+          </div>
+          <div class="games__item">
+            <img src="images/img/hooksheroes.jpg" width="250" height="188" alt="Hooks Heroes">
+          </div>
+          <div class="games__item">
+            <img src="images/img/GameOfThrones.jpg" width="250" height="188" alt="Game of Thrones">
+          </div>
+          <div class="games__item games__item--big recommends">
+            <img src="images/img/pink-elephants.jpg" width="493" height="384" alt="Pink Elephants">
+            <button class="games__play-now games__play-now--recommends" type="button">Play now</button>
           </div>
         </div>
       </section>
       <div class="payment-system">
-        <ul>
-          <li class="payment-system__item payment-system__item--neteller">
-            <a href="#" target="_blank"></a>
-          </li>
-          <li class="payment-system__item payment-system__item--skrill">
-            <a href="#" target="_blank"></a>
-          </li>
-          <li class="payment-system__item payment-system__item--cubits">
-            <a href="#" target="_blank"></a>
-          </li>
-          <li class="payment-system__item payment-system__item--mastercard">
-            <a href="#" target="_blank"></a>
-          </li>
-          <li class="payment-system__item payment-system__item--visa">
-            <a href="#" target="_blank"></a>
-          </li>
-          <li class="payment-system__item payment-system__item--qiwi">
-            <a href="#" target="_blank"></a>
-          </li>
-          <li class="payment-system__item payment-system__item--yandex-money">
-            <a href="#" target="_blank"></a>
-          </li>
-        </ul>
+        <a class="payment-system__item payment-system__item--neteller" href="#" target="_blank" aria-label="neteller"></a>
+        <a class="payment-system__item payment-system__item--skrill" href="#" target="_blank" aria-label="skrill"></a>
+        <a class="payment-system__item payment-system__item--cubits" href="#" target="_blank" aria-label="cubits"></a>
+        <a class="payment-system__item payment-system__item--mastercard" href="#" target="_blank" aria-label="mastercard"></a>
+        <a class="payment-system__item payment-system__item--visa" href="#" target="_blank" aria-label="visa"></a>
+        <a class="payment-system__item payment-system__item--qiwi" href="#" target="_blank" aria-label="qiwi"></a>
+        <a class="payment-system__item payment-system__item--yandex-money" href="#" target="_blank" aria-label="yandex-money"></a>
       </div>
     </main>
-    <footer>
-      <div class="providers">
-        <a class="providers__item providers__item--bet365" href="#" target="_blank">
-          <img src="#" alt="bet365">
-        </a>
-        <a class="providers__item providers__item--yggdrasil" href="#" target="_blank">
-          <img src="#" alt="yggdrasil">
-        </a>
-        <a class="providers__item providers__item--microgaming" href="#" target="_blank">
-          <img src="#" alt="microgaming">
-        </a>
-        <a class="providers__item providers__item--evolutiongaming" href="#" target="_blank">
-          <img src="#" alt="evolutiongaming">
-        </a>
-        <a class="providers__item providers__item--pariplay" href="#" target="_blank">
-          <img src="#" alt="pariplay">
-        </a>
-        <a class="providers__item providers__item--evolutiongaming" href="#" target="_blank">
-          <img src="#" alt="evolutiongaming">
-        </a>
-        <a class="providers__item providers__item--microgaming" href="#" target="_blank">
-          <img src="#" alt="microgaming">
-        </a>
-        <a class="providers__item providers__item--evolutiongaming" href="#" target="_blank">
-          <img src="#" alt="evolutiongaming">
-        </a>
-        <a class="providers__item providers__item--bet365" href="#" target="_blank">
-          <img src="#" alt="bet365">
-        </a>
-        <a class="providers__item providers__item--vivogaming" href="#" target="_blank">
-          <img src="#" alt="vivogaming">
-        </a>
-        <a class="providers__item providers__item--playson" href="#" target="_blank">
-          <img src="#" alt="playson">
-        </a>
-        <a class="providers__item providers__item--pragmaticplay" href="#" target="_blank">
-          <img src="#" alt="pragmaticplay">
-        </a>
-        <a class="providers__item providers__item--spotoption" href="#" target="_blank">
-          <img src="#" alt="spotoption">
-        </a>
-        <a class="providers__item providers__item--vivogaming" href="#" target="_blank">
-          <img src="#" alt="vivogaming">
-        </a>
-        <a class="providers__item providers__item--yggdrasil" href="#" target="_blank">
-          <img src="#" alt="yggdrasil">
-        </a>
-        <a class="providers__item providers__item--spotoption" href="#" target="_blank">
-          <img src="#" alt="spotoption">
-        </a>
-        <a class="providers__item providers__item--pragmaticplay" href="#" target="_blank">
-          <img src="#" alt="pragmaticplay">
-        </a>
-        <a class="providers__item providers__item--spotoption" href="#" target="_blank">
-          <img src="#" alt="spotoption">
-        </a>
-        <a class="providers__item providers__item--vivogaming" href="#" target="_blank">
-          <img src="#" alt="vivogaming">
-        </a>
+    <footer class="footer">
+      <div class="partners">
+        <a class="partners__item partners__item--bet365" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--yggdrasil" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--microgaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--evolutiongaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--pariplay" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--evolutiongaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--microgaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--evolutiongaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--bet365" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--vivogaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--playson" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--pragmaticplay" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--spotoption" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--vivogaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--yggdrasil" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--spotoption" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--pragmaticplay" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--spotoption" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--vivogaming" href="#" target="_blank"></a>
+        <a class="partners__item partners__item--yggdrasil" href="#" target="_blank"></a>
       </div>
-      <div class="footer-positioner">
-        <div class="footer-positioner__logo">
-          <div class="logo">
-            <span class="logo__image"></span>
-            <span class="logo__text">Casino Test</span>
-          </div>
-          <img alt="18+" width="53" height="53" src="#" class="adult-symbol">
-          <img alt="emblem" width="80" height="80" src="#" class="emblem">
+      <div class="footer footer__positioner positioner">
+        <div class="emblems">
+          <div class="emblems__logo logo">Casino Test</div>
+          <img alt="18+" width="63" height="63" src="../images/icon/sprite.icon.svg#adult">
+          <img alt="emblem" width="80" height="80" src="../images/img/emblem.png">
         </div>
         <nav class="sitemap">
           <div class="sitemap__block">
@@ -327,7 +353,7 @@
         </nav>
         <div class="information">
           <div class="information__radio">
-            <input type="radio" id="information-1" name="information">
+            <input type="radio" id="information-1" name="information" checked>
             <label for="information-1"></label>
             <input type="radio" id="information-2" name="information">
             <label for="information-2"></label>
@@ -340,7 +366,7 @@
             <input type="radio" id="information-6" name="information">
             <label for="information-6"></label>
           </div>
-          <div class="information__item">
+          <div class="information__item information__item--1">
             <h3>To test one’s luck, one don’t even need to leave his or her house</h3>
             <p>Today online casinos have ceased to be something unusual,
               they are pretty much the same organizations as genuine gambling-houses,
@@ -348,32 +374,11 @@
               The online casino WebbySlot is being repeatedly tested for its honesty, and passes such tests successfully!
             </p>
           </div>
-          <div class="information__item">
-            <h3>Text</h3>
-            <p>Text</p>
-          </div>
-          <div class="information__item">
-            <h3>Text</h3>
-            <p>Text</p>
-          </div>
-          <div class="information__item">
-            <h3>Text</h3>
-            <p>Text</p>
-          </div>
-          <div class="information__item">
-            <h3>Text</h3>
-            <p>Text</p>
-          </div>
-          <div class="information__item">
-            <h3>Text</h3>
-            <p>Text</p>
-          </div>
         </div>
       </div>
       <div class="rights">
         Deuscasino.com is operated by SG International N.V., which is registered in E-Commerce park, Vredenberg, Curacao, having gaming licence No.8048/JAZZ2015-035 and all rights to operate the gaming software. SG International LP is providing payment services as an agent according to the licence agreement concluded between SG International LP and SG International N.V.<br>
-        © Deus Casino. All rights reserved.<br>
-        Developed by <a>Softgamings</a>
+        © Deus Casino. All rights reserved.<br>Developed by <a>Softgamings</a>
       </div>
     </footer>
   </body>

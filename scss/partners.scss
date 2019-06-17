@@ -1,0 +1,66 @@
+.partners {
+  width: 1450px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-bottom: 2px solid #172146;
+}
+
+.partners__item {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('../images/partners/sprite.partners.svg');
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  &--bet365 {
+    width: 92px;
+  	height: 28px;
+    background-position: 0 99.9153846153846%;
+  }
+  &--evolutiongaming {
+    width: 138px;
+    height: 23.89px;
+  	background-position: 0 0;
+  }
+  &--microgaming {
+    width: 87px;
+  	height: 27px;
+  	background-position: 60.526315789473685% 99.15267175572518%;
+  }
+  &--pariplay {
+    width: 101px;
+  	height: 32px;
+    background-position: 0 55.46825396825397%;
+  }
+  &--playson {
+    width: 101px;
+  	height: 28px;
+    background-position: 0 78.37692307692308%;
+  }
+  &--pragmaticplay {
+    width: 102px;
+  	height: 46px;
+    background-position: 0 21.330357142857142%;
+  }
+  &--spotoption {
+    width: 101px;
+  	height: 32px;
+  	background-position: 100% 0;
+  }
+  &--vivogaming {
+    width: 98.93px;
+  	height: 53px;
+  	background-position: 98.52216748768474% 57.142857142857146%;
+  }
+  &--yggdrasil {
+    width: 101px;
+  	height: 28px;
+    background-position: 100% 24.615384615384617%;
+  }
+}
+
+.partners__item {
+  margin-left: 30px;
+  &:first-child {
+    margin-left: 10px;
+  }
+}
