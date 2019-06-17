@@ -1,0 +1,71 @@
+@mixin flag($width, $height, $text) {
+  content: $text;
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: $width;
+  height: $height;
+  background-image: url('../images/flag.svg');
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: $height;
+}
+
+@mixin new {
+  box-shadow: 0px 0px 14px $color-new;
+  border: 5px solid $color-new;
+}
+
+@mixin popular {
+  box-shadow: 0px 0px 14px $color-popular;
+  border: 5px solid $color-popular;
+}
+
+@mixin recommends {
+  box-shadow: 0px 0px 14px $color-recommends;
+  border: 5px solid $color-recommends;
+}
+
+@mixin light-text() {
+  font-size: 12px;
+  font-weight: normal;
+  color: $color-text-slim;
+}
+
+@mixin form-elements-design() {
+  height: 30px;
+  border-radius: 17px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid $color-form-border;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+
+@mixin pseudo-checkbox-sign-up() {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -1px;
+  left: -15px;
+  background: #ffffff;
+  border: 1px solid #C0C0C1;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+}
+
+@mixin style-button() {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+@mixin logo() {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-text-light;
+  background: url('../images/icon/sprite.icon.svg#cards') no-repeat;
+}

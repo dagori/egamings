@@ -34,34 +34,3 @@ button {
   height: inherit;
   margin: 0 auto;
 }
-
-@mixin flag($width, $height, $text) {
-  content: $text;
-  position: absolute;
-  top: 26px;
-  right: 0;
-  width: $width;
-  height: $height;
-  background-image: url('../images/flag.svg');
-  background-repeat: no-repeat;
-  color: white;
-  font-weight: 500;
-  font-size: 14px;
-  text-align: center;
-  line-height: $height;
-}
-
-@mixin new {
-  box-shadow: 0px 0px 14px $color-new;
-  border: 5px solid $color-new;
-}
-
-@mixin popular {
-  box-shadow: 0px 0px 14px $color-popular;
-  border: 5px solid $color-popular;
-}
-
-@mixin recommends {
-  box-shadow: 0px 0px 14px $color-recommends;
-  border: 5px solid $color-recommends;
-}

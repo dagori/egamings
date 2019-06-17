@@ -20,16 +20,3 @@ $color-bg-main: linear-gradient(283.07deg, #121726 57.75%, #222C42 90.78%);
 /*Ретина*/
 $retina-dpi: (min-resolution: 144dpi);
 $retina-dppx: (min-resolution: 1.5dppx);
-
-@mixin style-button() {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-}
-
-@mixin logo() {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: $color-text-light;
-  background: url('../images/icon/sprite.icon.svg#cards') no-repeat;
-}
