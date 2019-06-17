@@ -47,9 +47,9 @@ gulp.task('styles', () => {
     overrideBrowserList: ['last 2 versions', '>1%'],
     cascade: false
   }))
-//  .pipe(cleanCSS({
-//    level: 2
-//  }))
+  .pipe(cleanCSS({
+    level: 2
+  }))
   .pipe(sourcemaps.write())
   .pipe(rename(function (path) {
     path.basename = path.basename.slice(2);
@@ -86,7 +86,7 @@ gulp.task('images', () => {
 });
 
 gulp.task('del', () =>  {
-  return del(['/build']);
+  return del(['build/']);
 })
 
 gulp.task('build', gulp.series('del', gulp.parallel('images', 'styles')));
