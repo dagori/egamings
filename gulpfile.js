@@ -89,5 +89,5 @@ gulp.task('del', () =>  {
   return del(['build/']);
 })
 
-gulp.task('build', gulp.series('del', gulp.parallel('images', 'styles')));
+gulp.task('build', gulp.series('del', gulp.series('images', 'styles')));
 gulp.task('default', gulp.series('build', 'watch'));
