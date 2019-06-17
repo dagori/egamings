@@ -14,8 +14,8 @@ const plumber = require('gulp-plumber');
 const config = {
   shape: {
     dimension: { // Set maximum dimensions
-      maxWidth: 128,
-      maxHeight: 43
+      maxWidth: 26,
+      maxHeight: 26
     },
     spacing: { // Add padding
       padding: 5
@@ -33,9 +33,9 @@ const config = {
 };
 
 gulp.task('sprite', () => {
-  return gulp.src('images/partners/*.svg')
+  return gulp.src('images/icon/icon-*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('images/partners'));
+    .pipe(gulp.dest('images/icon'));
 });
 
 gulp.task('styles', () => {

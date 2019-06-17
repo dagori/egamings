@@ -37,6 +37,10 @@
   font-size: 18px;
   line-height: 21px;
   color: $color-button;
+  padding-right: 30px;
+  background: url("../images/icon/sprite.icon.svg#view-all") no-repeat;
+  background-size: 18px 23px;
+  background-position: right top;
 }
 
 .games__item {
@@ -48,7 +52,7 @@
     border-radius: 17px;
   }
   &:nth-of-type(even) {
-    margin-top: 8px;
+    margin-top: 10px;
   }
   &--big {
     width: 488px;
@@ -75,6 +79,7 @@
   $button-big-height: 46px;
   width: $button-big-width;
   height: $button-big-height;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 46px;
@@ -94,5 +99,32 @@
   &--recommends {
     color: $color-text-light;
     background: $color-recommends;
+  }
+}
+
+.games__item--big {
+  &.new::before {
+    @include flag(99px, 30px, 'New game');
+  }
+  &.popular::before {
+    @include flag(68px, 30px, 'Popular');
+  }
+  &.recommends::before {
+    @include flag(117px, 30px, 'Recommends');
+  }
+}
+
+.games__item:not(.games__item--big) {
+  &.new {
+    position: relative;
+  }
+  &.popular {
+    position: relative;
+  }
+  &.new::after {
+    @include flag(48px, 20px, 'New');
+  }
+  &.popular::after {
+    @include flag(64px, 20px, 'Popular');
   }
 }

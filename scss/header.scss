@@ -13,7 +13,7 @@
 
 .menu {
   width: 242px;
-  margin-right: auto;
+  margin: 0 auto 0 43px;
   ul {
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,6 @@
     color: $color-text-light;
   }
 }
-
 
 .logo {
   @include logo;

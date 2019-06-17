@@ -24,30 +24,31 @@ main {
   background-image: $color-bg-main;
 }
 
+button {
+  border: none;
+  background: transparent;
+}
+
 .positioner {
   width: 1530px;
   height: inherit;
   margin: 0 auto;
 }
 
-button {
-  border: none;
-  background: transparent;
-}
-
-@mixin flag {
-  content: '!!!!!!!!!!!!!!!!!!!!!!!!';
+@mixin flag($width, $height, $text) {
+  content: $text;
   position: absolute;
   top: 26px;
   right: 0;
-  width: 117px;
-  height: 30px;
-  background: linear-gradient(180deg, #1D1269 0%, #EB0255 22.95%);
-}
-
-.new::before {
-  position: relative;
-  @include flag;
+  width: $width;
+  height: $height;
+  background-image: url('../images/flag.svg');
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: $height;
 }
 
 @mixin new {

@@ -1,23 +1,16 @@
-/*
-<form class="search-form" name="searchGamesProviders" action="#" method="get">
-  <input class="search-form__field" type="search" name="searchGamesProvidersField">
-  <button class="search-form__button" type="submit" aria-label="games and providers search"></button>
-</form>
-*/
-
 .search-form {
+  display: flex;
   width: 390px;
   height: 31px;
   border-radius: 30px;
-  border: $color-form-border;
-  background: red;
-  display: flex;
+  border: 1px solid $color-search-border;
 }
 
 .search-form__field {
   height: 100%;
   width: 340px;
-  background: white;
+  border-color: transparent;
+  background: transparent;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
@@ -27,6 +20,26 @@
   height: 100%;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-color: blue;
-//  background: url('../images/icon/sprite.icon.svg#search') no-repeat;
+  background-color: transparent;;
+  background: url('../images/icon/sprite.icon.svg#search') no-repeat;
+  background-size: 30px 31px;
+  background-position: center;
+}
+
+/*********HEADER SEARCH*********/
+.search-form--site {
+  width: 50px;
+  position: relative;
+  border: none;
+  .search-form__field {
+    display: none;
+    position: absolute;
+    border-radius: 30px;
+  }
+  .search-form__button {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }

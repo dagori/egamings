@@ -15,7 +15,7 @@
       <div class="positioner header--positioner">
         <form class="search-form search-form--site" name="searchSite" action="#" method="get">
           <input class="search-form__field" type="search" name="searchSiteField">
-          <button class="search-form__button" type="submit" aria-label="site search"></button>
+          <button class="search-form__button" type="submit" aria-label="search for site"></button>
         </form>
         <nav class="menu">
           <ul>
@@ -44,43 +44,46 @@
             <h3 class="sign-up__title">Sign up and start winning</h3>
             <span class="sign-up__info">With your social network</span>
             <ul class="sign-up__social social-list">
-              <li class="social-list__item social-list__item--arroba"></li>
-              <li class="social-list__item social-list__item--odnoklassniki"></li>
-              <li class="social-list__item social-list__item--facebook"></li>
-              <li class="social-list__item social-list__item--vk"></li>
-              <li class="social-list__item social-list__item--google-plus"></li>
+              <li class="social-list__item social-list__item--arroba">
+                <a href="#" aria-label="arroba"></a>
+              </li>
+              <li class="social-list__item social-list__item--odnoklassniki">
+                <a href="#" aria-label="odnoklassniki"></a>
+              </li>
+              <li class="social-list__item social-list__item--facebook">
+                <a href="#" aria-label="facebook"></a>
+              </li>
+              <li class="social-list__item social-list__item--vk">
+                <a href="#" aria-label="vk"></a>
+              </li>
+              <li class="social-list__item social-list__item--google-plus">
+                <a href="#" aria-label="google-plus"></a>
+              </li>
             </ul>
             <span class="sign-up__info">or</span>
-
             <form class="sign-up__form" name="registration" action="#" method="post">
               <input type="email" name="email" placeholder="E-mail *" required>
-
-              <label class="sign-up__password">
+              <div class="sign-up__password">
                 <input type="password" name="password" placeholder="Password *" required>
                 <button class="sign-up__password-button" type="button" title="Show password"></button>
-              </label>
-
+              </div>
               <select name="currency" required>
                 <option value="">Currency *</option>
               </select>
-
               <label class="sign-up__promocode">
                 <input type="text" name="promocode" placeholder="Promo-code">
                 <a href="#" title="promo-code information">?</a>
               </label>
-
-              <label class="sign-up__info" for="check-agreement">I agree with <a href="#"><input type="checkbox" name="agreement" id="check-agreement">Teame and Confidence</a>
+              <label class="sign-up__info sign-up__info--check" for="check-agreement">
+                <input type="checkbox" name="agreement" id="check-agreement">I agree with <a href="#">Teame and Confidence</a>
               </label>
-
-              <label class="sign-up__info" for="check-adult"><input type="checkbox" name="adult" id="check-adult">I comfirm that I’m 18 years or older</label>
-
+              <label class="sign-up__info sign-up__info--check" for="check-adult">
+                <input type="checkbox" name="adult" id="check-adult">I comfirm that I’m 18 years or older
+              </label>
               <button class="sign-up__submit" type="submit">Register</button>
-
               <a  class="sign-up__info" href="#">Have an account?</a>
             </form>
-
           </div>
-          <!--Слайдер??-->
           <div class="slider">
             <div class="slider__button-container">
               <button class="slider__button slider__button--prev" type="button"></button>
@@ -93,7 +96,7 @@
               <a class="slide__button" href="#">Deposit</a>
             </div>
             <div class="slider__thumbler-container">
-              <input type="radio" id="radio-1" name="radio">
+              <input type="radio" id="radio-1" name="radio" checked>
               <label for="radio-1"></label>
 
               <input type="radio" id="radio-2" name="radio">
@@ -110,37 +113,37 @@
       </section>
       <div class="games-menu">
         <div class="games-menu__positioner positioner">
-          <ul class="games-menu__list games-category">
-            <li class="games-category__item">New games</li>
-            <li class="games-category__item">Popular</li>
-            <li class="games-category__item">Slots</li>
-            <li class="games-category__item">Casino Live</li>
-            <li class="games-category__item">Table Games</li>
-            <li class="games-category__item">Favorites</li>
-            <li class="games-category__item">Last played</li>
-            <li class="games-category__item games-category__item--all">All category</li>
-          </ul>
-          <form class="search-form" name="searchGamesProviders" action="#" method="get">
+          <div class="games-menu__list games-category">
+            <a href="#" class="games-category__item games-category__item--new">New games</a>
+            <a href="#" class="games-category__item games-category__item--popular">Popular</a>
+            <a href="#" class="games-category__item games-category__item--slots">Slots</a>
+            <a href="#" class="games-category__item games-category__item--live">Casino Live</a>
+            <a href="#" class="games-category__item games-category__item--table">Table Games</a>
+            <a href="#" class="games-category__item games-category__item--favorites">Favorites</a>
+            <a href="#" class="games-category__item games-category__item--last">Last played</a>
+            <a href="#" class="games-category__item games-category__item--all">All category</a>
+          </div>
+          <form class="search-form search-form--games" name="searchGamesProviders" action="#" method="get">
             <input class="search-form__field" type="search" name="searchGamesProvidersField">
-            <button class="search-form__button" type="submit" aria-label="games and providers search"></button>
+            <button class="search-form__button" type="submit" aria-label="search for games and providers"></button>
           </form>
         </div>
         <div class="games-menu__positioner positioner">
-          <ul class="games-menu__list providers-category">
-            <li class="providers-category__item providers-category__item--active">All Providers</li>
-            <li class="providers-category__item">NetEnt</li>
-            <li class="providers-category__item">Microgaming</li>
-            <li class="providers-category__item">Quickspin</li>
-            <li class="providers-category__item">PragmaticPlay</li>
-            <li class="providers-category__item">BoomingGames</li>
-            <li class="providers-category__item">MrSlotty</li>
-            <li class="providers-category__item">BoomingGames</li>
-            <li class="providers-category__item">BetRadar</li>
-            <li class="providers-category__item">PariPlay</li>
-            <li class="providers-category__item">BetConstruct</li>
-            <li class="providers-category__item">NetEnt</li>
-            <li class="providers-category__item providers-category__item--more">More</li>
-          </ul>
+          <div class="games-menu__list providers-category">
+            <a href="#" class="providers-category__item providers-category__item--all">All Providers</a>
+            <a href="#" class="providers-category__item providers-category__item--netent">NetEnt</a>
+            <a href="#" class="providers-category__item providers-category__item--microgaming">Microgaming</a>
+            <a href="#" class="providers-category__item providers-category__item--quickspin">Quickspin</a>
+            <a href="#" class="providers-category__item providers-category__item--pragmaticplay">PragmaticPlay</a>
+            <a href="#" class="providers-category__item providers-category__item--boominggames">BoomingGames</a>
+            <a href="#" class="providers-category__item providers-category__item--mrslotty">MrSlotty</a>
+            <a href="#" class="providers-category__item providers-category__item--boominggames">BoomingGames</a>
+            <a href="#" class="providers-category__item providers-category__item--betradar">BetRadar</a>
+            <a href="#" class="providers-category__item providers-category__item--pariplay">PariPlay</a>
+            <a href="#" class="providers-category__item providers-category__item--betconstruct">BetConstruct</a>
+            <a href="#" class="providers-category__item providers-category__item--netent">NetEnt</a>
+            <a href="#" class="providers-category__item providers-category__item--more">More</a>
+          </div>
         </div>
       </div>
       <section class="games games--new">
