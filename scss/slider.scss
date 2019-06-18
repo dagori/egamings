@@ -1,16 +1,16 @@
 .slider {
-  width: 1045px;
+  width: 1244px;
   height: 492px;
-  padding-left: 68px;
-  display: flex;
-  flex-direction: column;
-  padding-top: 57px;
+  position: relative;
   box-shadow: -30px 0px 20px 5px rgba(0, 0, 0, 0.3);
 }
 
 .slider__button-container {
+  position: absolute;
+  top: 57px;
+  left: 68px;
+  z-index: 10;
   width: 90px;
-  margin-bottom: 20px;
 }
 
 .slider__button {
@@ -29,7 +29,52 @@
   }
 }
 
+.slider__thumbler-container {
+  position: absolute;
+  bottom: 20px;
+  left: 68px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 970px;
+  height: 5px;
+  input {
+    display: none;
+  }
+  label {
+    width: 236px;
+    height: 5px;
+    background: rgba(72, 80, 143, 0.7);
+    border-radius: 50px;
+    position: relative;
+  }
+  input:checked + label::before {
+    content: '';
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    background: $color-button;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+  }
+}
+
+/*Слайд*/
 .slide {
+  padding-top: 114px;
+  height: 100%;
+  background-image: url("../images/img/brice-laville-saint-martin-asset.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 1244px 492px;
+  @media #{$retina-dpi}, #{$retina-dppx} {
+    background-image: url("../images/img/brice-laville-saint-martin-asset@2x.jpg");
+  }
+}
+
+.slide__content {
+  padding-left: 68px;
   span {
     font-size: 14px;
   }
@@ -70,32 +115,4 @@
   text-align: center;
   border-radius: 100px;
   color: $color-text-light;
-}
-
-.slider__thumbler-container {
-  display: flex;
-  justify-content: space-between;
-  width: 970px;
-  height: 5px;
-  margin-top: 120px;
-  input {
-    display: none;
-  }
-  label {
-    width: 236px;
-    height: 5px;
-    background: rgba(72, 80, 143, 0.7);
-    border-radius: 50px;
-    position: relative;
-  }
-  input:checked + label::before {
-    content: '';
-    position: absolute;
-    width: 118px;
-    height: 5px;
-    background: $color-button;
-    border-radius: 50px;
-    left: 0;
-    top: 0;
-  }
 }
