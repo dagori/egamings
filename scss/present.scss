@@ -1,18 +1,16 @@
 .present {
+  display: flex;
+  justify-content: space-between;
   width: 1920px;
   height: 492px;
   margin: 0 auto;
-  background-image: url("../images/img/brice-laville-saint-martin-asset.jpg");
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 1244px 492px;
-  @media #{$retina-dpi}, #{$retina-dppx} {
-    background-image: url("../images/img/brice-laville-saint-martin-asset@2x.jpg");
-  }
 }
 
-.present--positioner {
+.present__positioner {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  width: 676px;
   height: 100%;
+  padding-right: 85px;
 }
