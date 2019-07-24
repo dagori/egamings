@@ -33,9 +33,9 @@ const config = {
 };
 
 gulp.task('sprite', () => {
-  return gulp.src('images/icon/icon-*.svg')
+  return gulp.src('images-dev/icon/icon-*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('images/icon'));
+    .pipe(gulp.dest('images-dev/icon'));
 });
 
 gulp.task('styles', () => {
@@ -59,19 +59,27 @@ gulp.task('styles', () => {
   .pipe(browserSync.stream())
 });
 
+gulp.task('js', () => {
+  return gulp.src('js/slider.js')
+  .pipe(plumber())
+  .pipe(gulp.dest('build/js'))
+  .pipe(browserSync.stream())
+});
+
 gulp.task('watch', () => {
   browserSync.init({
        server: {
            baseDir: "./"
        }
    })
-   gulp.watch('images/**', gulp.series('images'))
+   gulp.watch('images-dev/**', gulp.series('images'))
    gulp.watch('scss/*.scss', gulp.series('styles'))
+   gulp.watch('js/*.js', gulp.series('js'))
    gulp.watch('*.html').on('change', browserSync.reload)
 });
 
 gulp.task('images', () => {
-  return gulp.src('images/**', { allowEmpty: true })
+  return gulp.src('images-dev/**', { allowEmpty: true })
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [
@@ -89,5 +97,5 @@ gulp.task('del', () =>  {
   return del(['build/']);
 })
 
-gulp.task('build', gulp.series('del', gulp.series('images', 'styles')));
+gulp.task('build', gulp.series('del', gulp.series('images', 'styles', 'js')));
 gulp.task('default', gulp.series('build', 'watch'));
