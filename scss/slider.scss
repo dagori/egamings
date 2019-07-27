@@ -24,7 +24,7 @@ $slider-container-width: $slider-width * $all-slides;
   height: 33px;
   background: transparent;
   border-radius: 50%;
-  border: 1px solid #595959;
+  border: 2px solid #595959;
   background-repeat: no-repeat;
   background-position: center;
   &--prev {
@@ -64,8 +64,7 @@ $slider-container-width: $slider-width * $all-slides;
     cursor: pointer;
   }
 
-  input:checked + .slider__label::before {
-    content: '';
+  .slider__active {
     position: absolute;
     width: 118px;
     height: 5px;
@@ -73,24 +72,12 @@ $slider-container-width: $slider-width * $all-slides;
     left: 0;
     background: $color-button;
     border-radius: 50px;
-    // animation-name:  label-move;
-    // animation-duration: .5s;
-    // animation-timing-function: linear;
-    // animation-delay: 4s;
-    // animation-fill-mode: forwards;
+    animation: label-move 0.3s linear 3.7s forwards;
   }
 }
 
-// @keyframes label-move {
-//   0% {
-//     left: 0;
-//     opacity: 1;
-//   }
-//   99.9% {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//     left: 118px;
-//   }
-// }
+@keyframes label-move {
+  100% {
+    left: 118px;
+  }
+}
