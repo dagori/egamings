@@ -1,15 +1,16 @@
 'use strict';
-const gulp = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
-const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
+const uglify = require('gulp-uglify');
+//const htmlmin = require('gulp-htmlmin');
 
 const config = {
   shape: {
@@ -32,54 +33,59 @@ const config = {
   }
 };
 
-gulp.task('sprite', () => {
-  return gulp.src('images-dev/icon/icon-*.svg')
+// function html() {
+//   return src('*.html')
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(dest('build'))
+// }
+
+function sprites() {
+  return src('images-dev/*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('images-dev/icon'));
-});
+    .pipe(dest('build/images'));
+}
 
-gulp.task('styles', () => {
-  return gulp.src('scss/a-style.scss')
+function styles() {
+  return src('scss/a-style.scss', { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      overrideBrowserList: ['last 2 versions', '>1%'],
+      cascade: false
+    }))
+    .pipe(cleanCSS({
+      level: 2
+    }))
+    .pipe(rename(function (path) {
+      path.basename = path.basename.slice(2) + ".min";
+    }))
+    .pipe(dest('build/css', { sourcemaps: true }))
+    .pipe(browserSync.stream())
+}
+
+function scripts() {
+  return src('js/*.js', { sourcemaps: true })
   .pipe(plumber())
-  .pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
-  .pipe(autoprefixer({
-    overrideBrowserList: ['last 2 versions', '>1%'],
-    cascade: false
-  }))
-  .pipe(cleanCSS({
-    level: 2
-  }))
-  .pipe(sourcemaps.write())
-  .pipe(rename(function (path) {
-    path.basename = path.basename.slice(2);
-    path.basename += ".min";
-  }))
-  .pipe(gulp.dest('build/css'))
+  .pipe(uglify())
+  .pipe(rename({ extname: '.min.js' }))
+  .pipe(dest('build/js'), { sourcemaps: true })
   .pipe(browserSync.stream())
-});
+}
 
-gulp.task('js', () => {
-  return gulp.src('js/slider.js')
-  .pipe(plumber())
-  .pipe(gulp.dest('build/js'))
-  .pipe(browserSync.stream())
-});
-
-gulp.task('watch', () => {
+function serve() {
   browserSync.init({
-       server: {
-           baseDir: "./"
-       }
-   })
-   gulp.watch('images-dev/**', gulp.series('images'))
-   gulp.watch('scss/*.scss', gulp.series('styles'))
-   gulp.watch('js/*.js', gulp.series('js'))
-   gulp.watch('*.html').on('change', browserSync.reload)
-});
+    server: {
+       baseDir: "./"
+    }
+  });
+  watch('images/*', series(images))
+  watch('js/*.js', series(scripts))
+  watch('scss/*.scss', series(styles))
+  watch('*.html').on('change', browserSync.reload)
+}
 
-gulp.task('images', () => {
-  return gulp.src('images-dev/**', { allowEmpty: true })
+function images() {
+  return src('images-dev/**')
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [
@@ -90,12 +96,17 @@ gulp.task('images', () => {
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng({optimizationLevel: 5})
     ]))
-    .pipe(gulp.dest('build/images'))
-});
+    .pipe(dest('build/images'))
+}
 
-gulp.task('del', () =>  {
-  return del(['build/']);
-})
+function clean() {
+  return del(['build/*']);
+}
 
-gulp.task('build', gulp.series('del', gulp.series('images', 'styles', 'js')));
-gulp.task('default', gulp.series('build', 'watch'));
+exports.serve = serve;
+exports.css = styles;
+exports.js = scripts;
+exports.img = images;
+exports.clean = clean;
+exports.sprites = sprites;
+exports.default = series(clean, images, styles, scripts, serve);

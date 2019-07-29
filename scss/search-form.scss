@@ -9,10 +9,12 @@
 .search-form__field {
   height: 100%;
   width: 340px;
+  padding-left: 10px;
   border-color: transparent;
   background: transparent;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  color: $color-text-light;
 }
 
 .search-form__button {
@@ -29,17 +31,26 @@
 /*********HEADER SEARCH*********/
 .search-form--site {
   width: 50px;
-  position: relative;
   border: none;
+  position: absolute;
+  z-index: 10;
   .search-form__field {
     display: none;
-    position: absolute;
-    border-radius: 30px;
   }
-  .search-form__button {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .search-form--site {
+    top: 25px;
+  }
+}
+
+.search-form--site:hover, .search-form--site:focus {
+  width: 340px;
+  border: 1px solid $color-search-border;
+  background:  $color-bg-dark;
+  transition: width 0.4s;
+  .search-form__field {
+    display: block;
   }
 }
