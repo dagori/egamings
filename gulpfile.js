@@ -10,6 +10,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
+const uglify = require('gulp-uglify');
 
 const config = {
   shape: {
@@ -62,6 +63,7 @@ gulp.task('styles', () => {
 gulp.task('js', () => {
   return gulp.src('js/slider.js')
   .pipe(plumber())
+  .pipe(uglify())
   .pipe(gulp.dest('build/js'))
   .pipe(browserSync.stream())
 });
