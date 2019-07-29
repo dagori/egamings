@@ -64,20 +64,14 @@ $slider-container-width: $slider-width * $all-slides;
     cursor: pointer;
   }
 
-  .slider__active {
+  input:checked + .slider__label::before {
+    content: '';
     position: absolute;
-    width: 118px;
+    width: inherit;
     height: 5px;
     top: 0;
     left: 0;
     background: $color-button;
     border-radius: 50px;
-    animation: label-move 0.3s linear 3.7s forwards;
-  }
-}
-
-@keyframes label-move {
-  100% {
-    left: 118px;
   }
 }
