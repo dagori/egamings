@@ -24,7 +24,7 @@ $slider-container-width: $slider-width * $all-slides;
   height: 33px;
   background: transparent;
   border-radius: 50%;
-  border: 2px solid #595959;
+  border: 1px solid $color-text-light;
   background-repeat: no-repeat;
   background-position: center;
   &--prev {

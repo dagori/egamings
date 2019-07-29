@@ -67,10 +67,12 @@
 
 input[type="email"], input[type="text"] {
   width: 100%;
+  color: $color-text-light;
 }
 
 input[type="password"] {
   width: 213px;
+  color: $color-text-light;
 }
 
 select[name="currency"] {
@@ -119,13 +121,30 @@ select[name="currency"] {
   width: 210px;
   position: relative;
   text-align: center;
-  input {
-    display: none;
-  }
   &--check::before {
     @include pseudo-checkbox-sign-up;
   }
 }
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .sign-up__info--check {
+  &::before {
+    background: $color-button;
+  }
+  &::after {
+    content: '✔';
+    color: $color-text-dark;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -1px;
+    left: -16px;
+  }
+}
+
 
 .sign-up__submit {
   width: 124px;
